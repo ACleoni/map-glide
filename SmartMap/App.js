@@ -1,37 +1,38 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, View} from 'react-native';
+import Animation from 'lottie-react-native';
+import anim from './assets/map.json';
+import UIController from './src/components/partials/BackgroundWrapper';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
-
-export default class App extends Component {
+class App extends Component {
+  componentDidMount() {
+    this.animation.play();
+  }
+  
   render() {
     return (
+      <UIController>
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
+      <Image source={require('./images/logo.png')} style={{width: 220, height: 140}} />
+      <Image source={require('./images/logo.png')} style={{width: 200, height: 120}} />
+        <Animation
+          ref={animation => {
+            this.animation = animation;
+          }}
+          loop={true}
+          source={anim}
+        />
       </View>
+      </UIController>
     );
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
+    // flex: 1,
+    height: '100%',
+    justifyContent: 'space-around',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
@@ -46,3 +47,5 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
 });
+
+export default App
