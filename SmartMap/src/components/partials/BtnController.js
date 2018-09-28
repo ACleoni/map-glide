@@ -5,6 +5,7 @@ import {
     Stylesheet
 } from 'react-native';
 
+const Service = require('')
 
 
 

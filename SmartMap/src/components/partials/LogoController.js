@@ -31,6 +31,6 @@ const styles = StyleSheet.create({
         width: 194.98,
         height: 48.23
     }
-})
+});
 
 export default LogoController
