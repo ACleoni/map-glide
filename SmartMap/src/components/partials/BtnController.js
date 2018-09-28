@@ -5,7 +5,8 @@ import {
     Stylesheet
 } from 'react-native';
 
-const Service = require('')
+const Service = require('../../services');
+const { getStyleFromProps } = Service
 
 
 
@@ -13,8 +14,8 @@ class BtnController extends Component {
     render() {
         const style = {
             ...styles.container,
-
-        }
+            ...getStyleFromProps(['marginTop', 'width', 'flex'], this.props)
+        };
     }
 };
 
