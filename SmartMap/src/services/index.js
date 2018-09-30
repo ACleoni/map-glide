@@ -30,4 +30,4 @@ class Service {
     }
 };
 
-module.exports = new Service()
+module.exports = (new Service());

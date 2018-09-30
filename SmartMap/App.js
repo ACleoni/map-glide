@@ -1,8 +1,6 @@
-import { HomeScreen } from './src/screens';
 import { createStackNavigator } from 'react-navigation';
+import { HomeScreen }  from './src/screens';
 
-const App = createStackNavigator({
-  Home: {Screen: HomeScreen}
-})
-
-export default App
+export default App = createStackNavigator({
+  Home: {screen: HomeScreen}
+});

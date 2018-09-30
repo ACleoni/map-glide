@@ -25,12 +25,13 @@ const styles = StyleSheet.create({
     logoContainer: {
         width: window.width,
         alignItems: 'center',
-        marginTop: 66
+        // marginTop: 66
     },
     image: {
-        width: 194.98,
-        height: 48.23
+        width: 164.98,
+        height: 118.23
     }
 });
+
 
 export default LogoController
