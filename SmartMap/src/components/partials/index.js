@@ -1,18 +1,18 @@
 import UIController from './UIController';
 import LogoController from './LogoController';
-import AnimController from './AnimController';
+import { SearchBarController } from './SearchBarController';
 import BtnController from './BtnController';
 
 export {
     UIController,
     LogoController,
-    BtnController,
-    AnimController
+    SearchBarController,
+    BtnController
 };
 
 export default {
     UIController,
     LogoController,
-    BtnController,
-    AnimController
+    SearchBarController,
+    BtnController
 };

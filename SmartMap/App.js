@@ -1,6 +1,7 @@
 import { createStackNavigator } from 'react-navigation';
-import { HomeScreen }  from './src/screens';
+import { HomeScreen, MapScreen }  from './src/screens';
 
 export default App = createStackNavigator({
-  Home: {screen: HomeScreen}
+  Home: {screen: HomeScreen},
+  Map: {screen: MapScreen}
 });

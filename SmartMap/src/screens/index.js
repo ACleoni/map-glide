@@ -1,12 +1,12 @@
 import HomeScreen from './HomeScreen';
-// import MapScreen from './MapScreen';
+import MapScreen from './MapScreen';
 
 export {
     HomeScreen,
-    // MapScreen,
+    MapScreen,
 };
 
 export default {
     HomeScreen,
-    // MapScreen,
+    MapScreen,
 };
