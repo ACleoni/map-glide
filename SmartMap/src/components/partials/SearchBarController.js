@@ -4,8 +4,9 @@ import { SearchBar } from 'react-native-elements';
 
 export const SearchBarController = ({ onChangeText, onClearText, placeholder, onSubmitEditing }) => {
     return (
-        <View>
+        <View style={{zIndex: 1}}>
             <SearchBar
+                round={true}
                 onChangeText={onChangeText}
                 onClearText={onClearText}
                 placeholder={placeholder}

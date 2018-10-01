@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
+import { View, StyleSheet} from 'react-native';
+import MapView from 'react-native-maps';
 import { Marker } from 'react-native-maps';
 
 
@@ -11,8 +12,33 @@ class MapController extends Component {
 
             },
             markers: []
-        }
+        };
+    };
+
+    render() {
+        return (
+            <View style={styles.container}>
+                <MapView style={styles.map}>
+                
+                </MapView>
+            </View>
+        )
+    }
+
+    componentDidMount() {
+        
     }
 }
+
+const styles = StyleSheet.create({
+    container: {
+        ...StyleSheet.absoluteFillObject,
+        height: '100%',
+        width: '100%',
+    },
+    map: {
+        ...StyleSheet.absoluteFillObject
+    }
+})
 
 export default MapController

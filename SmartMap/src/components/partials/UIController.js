@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {
     View,
     Dimensions,
-    StyleSheet,
+    StyleSheet
 } from 'react-native';
 
 const Service = require('../../services');
@@ -10,6 +10,8 @@ const {
     getStyleFromProps,
     getPlatformValue
 } = Service
+
+const {width, height} = Dimensions.get('window');
 
 
 class UIController extends Component {
@@ -20,7 +22,9 @@ class UIController extends Component {
     };
 
     _renderViewBackground() {
-        const style = [styles.containerView, getStyleFromProps(['paddingTop'], this.props)];
+        const style = [ styles.containerView, 
+                        getStyleFromProps(['paddingTop', 'justifyContent'], this.props)
+                    ];
         return <View style={style}>
                     {this._renderChildren()}
                 </View>
@@ -35,8 +39,9 @@ class UIController extends Component {
 
 const styles = StyleSheet.create({
     containerView: {
-        flex: 1,
-        paddingTop: getPlatformValue('android', 5, 22)
+        width: width,
+        height: height,
+        paddingTop: getPlatformValue('android', 5, 0)
     }
 });
 
